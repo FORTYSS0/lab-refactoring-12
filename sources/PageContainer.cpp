@@ -75,7 +75,7 @@ void PageContainer::DataLoad(const float& threshold) {
       Histogram::GetInstance().PlusNumSkip();
     }
   }
-  Histogram::GetInstance().SetAvg(sum/counter);
+  Histogram::GetInstance().Set_svg(sum/counter);
   if (data.size() < kMinLines) {
     throw std::runtime_error("correct items less then const");
   }
