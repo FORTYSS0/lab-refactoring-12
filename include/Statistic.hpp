@@ -15,7 +15,7 @@ class Statistic {
 
   void Skip(const Item& item);
 
-  virtual ~Statistic () = default;
+  virtual ~Statistic() = default;
 
  private:
   virtual void AsyncSend(const std::vector<Item>& items, std::string_view path);
