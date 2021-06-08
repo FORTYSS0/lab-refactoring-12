@@ -1,7 +1,7 @@
 // Copyright 2021 by FORTYSS
 
-#ifndef TEMPLATE_LOG_HPP_
-#define TEMPLATE_LOG_HPP_
+#ifndef INCLUDE_LOG_HPP_
+#define INCLUDE_LOG_HPP_
 #include "header.hpp"
 
 class Log {
@@ -29,4 +29,4 @@ struct Item {
   std::string name;
   float score = 0;
 };
-#endif  // TEMPLATE_LOG_HPP_
+#endif  // INCLUDE_LOG_HPP_

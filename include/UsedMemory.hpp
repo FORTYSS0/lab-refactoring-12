@@ -1,7 +1,7 @@
 // Copyright 2021 by FORTYSS
 
-#ifndef TEMPLATE_USEDMEMORY_HPP_
-#define TEMPLATE_USEDMEMORY_HPP_
+#ifndef INCLUDE_USEDMEMORY_HPP_
+#define INCLUDE_USEDMEMORY_HPP_
 #include "Log.hpp"
 #include "header.hpp"
 
@@ -19,4 +19,4 @@ class UsedMemory {
  private:
   size_t used_ = 0;
 };
-#endif  // TEMPLATE_USEDMEMORY_HPP_
+#endif  // INCLUDE_USEDMEMORY_HPP_

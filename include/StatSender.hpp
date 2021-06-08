@@ -1,7 +1,7 @@
 // Copyright 2021 by FORTYSS
 
-#ifndef TEMPLATE_STATSENDER_HPP_
-#define TEMPLATE_STATSENDER_HPP_
+#ifndef INCLUDE_STATSENDER_HPP_
+#define INCLUDE_STATSENDER_HPP_
 #include <fstream>
 #include <string_view>
 
@@ -22,4 +22,4 @@ class StatSender {
 
   std::ofstream fstr{"network", std::ios::binary};
 };
-#endif  // TEMPLATE_STATSENDER_HPP_
+#endif  // INCLUDE_STATSENDER_HPP_
