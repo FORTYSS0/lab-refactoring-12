@@ -3,6 +3,7 @@
 #ifndef INCLUDE_LOG_HPP_
 #define INCLUDE_LOG_HPP_
 #include "header.hpp"
+#include <string>
 
 class Log {
  public:

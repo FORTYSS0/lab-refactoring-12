@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <set>
 #include <sstream>
+#include <vector>
 
 #include "Histogram.hpp"
 #include "Log.hpp"
@@ -37,6 +38,7 @@ class PageContainer {
       : memory_counter_(memory_counter), stat_sender_(stat_sender){}
 
   ~PageContainer();
+
  private:
   UsedMemory* memory_counter_;
   StatSender* stat_sender_;

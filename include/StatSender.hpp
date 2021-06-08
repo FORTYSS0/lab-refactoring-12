@@ -4,11 +4,13 @@
 #define INCLUDE_STATSENDER_HPP_
 #include <fstream>
 #include <string_view>
+#include <vector>
 
 #include "Log.hpp"
 #include "header.hpp"
 
 class StatSender {
+
  public:
 
   void OnLoaded(const std::vector<Item>& new_items);
