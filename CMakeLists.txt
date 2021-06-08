@@ -34,9 +34,9 @@ find_package(Boost CONFIG REQUIRED program_options)
 
 add_library(${PROJECT_NAME} STATIC
   # enum your files and delete this comment
-        sources/Log.cpp
+        sources/Loger.cpp
         sources/UsedMemory.cpp
-        sources/StatSender.cpp
+        sources/Statistic.cpp
         sources/PageContainer.cpp
         sources/Histogram.cpp)
 

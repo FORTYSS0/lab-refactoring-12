@@ -3,7 +3,7 @@
 #include <boost/program_options.hpp>
 #include <header.hpp>
 
-#include "Log.hpp"
+#include "Loger.hpp"
 #include "PageContainer.hpp"
 #include "UsedMemory.hpp"
 
@@ -37,7 +37,7 @@ int main(const int argc, const char* argv[]) {
     if(vm.count("help")){
       cout << desc << endl;
     } else if(argc > 1){
-      Log::GetInstance().Setting(vm.count("log_debug"));
+      Loger::GetInstance().Setting(vm.count("log_debug"));
       UsedMemory used_memory;
 
       PageContainer page{};
@@ -46,24 +46,24 @@ int main(const int argc, const char* argv[]) {
       page.RawLoad(in);
       page.DataLoad(vm["threshold"].as<int>());
 
-      Log::GetInstance().Write("Used memory: " +
+      Loger::GetInstance().Write("Used memory: " +
                                std::to_string(used_memory.Used()));
-      Log::GetInstance().
+      Loger::GetInstance().
           Write("Number skips in this lap: " +
                 std::to_string(Histogram::GetInstance().GetNumSkip()));
-      Log::GetInstance().
+      Loger::GetInstance().
           Write("AVG score: " +
                     std::to_string(Histogram::GetInstance().GetAvg()));
 
       page.PrintTable();
 
       page.DataLoad(vm["threshold"].as<int>()+3);
-      Log::GetInstance().Write("Used memory: " +
+      Loger::GetInstance().Write("Used memory: " +
                                std::to_string(used_memory.Used()));
-      Log::GetInstance().
+      Loger::GetInstance().
           Write("Number skips in this lap: " +
                 std::to_string(Histogram::GetInstance().GetNumSkip()));
-      Log::GetInstance().
+      Loger::GetInstance().
           Write("AVG score: " +
                 std::to_string(Histogram::GetInstance().GetAvg()));
     } else {

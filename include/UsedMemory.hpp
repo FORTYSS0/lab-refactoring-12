@@ -2,10 +2,11 @@
 
 #ifndef INCLUDE_USEDMEMORY_HPP_
 #define INCLUDE_USEDMEMORY_HPP_
-#include "Log.hpp"
-#include "header.hpp"
 #include <string>
 #include <vector>
+
+#include "Loger.hpp"
+#include "header.hpp"
 
 class UsedMemory {
  public:

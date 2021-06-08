@@ -34,7 +34,7 @@ void PageContainer::RawLoad(std::istream& file) {
 
   if (file.peek() == EOF)  throw std::runtime_error("file is empty");
 
-  Log::GetInstance().WriteDebug("file open");
+  Loger::GetInstance().WriteDebug("file open");
 
   while (!file.eof()) {
     std::string line;

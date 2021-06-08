@@ -5,9 +5,9 @@
 
 #include <cstring>
 
-#include "Log.hpp"
+#include "Loger.hpp"
 #include "PageContainer.hpp"
-#include "StatSender.hpp"
+#include "Statistic.hpp"
 #include "UsedMemory.hpp"
 #include "header.hpp"
 #include "sstream"
@@ -60,7 +60,7 @@ TEST(File, Bad_fomat){
   EXPECT_EQ(10, page.GetRawDataSize());
 }
 
-class MockStatSender : public StatSender {
+class MockStatSender : public Statistic {
  public:
   MOCK_METHOD2(AsyncSend, void(const std::vector<Item>&, std::string_view));
 };

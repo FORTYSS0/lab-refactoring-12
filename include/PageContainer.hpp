@@ -9,8 +9,8 @@
 #include <vector>
 
 #include "Histogram.hpp"
-#include "Log.hpp"
-#include "StatSender.hpp"
+#include "Loger.hpp"
+#include "Statistic.hpp"
 #include "UsedMemory.hpp"
 #include "header.hpp"
 

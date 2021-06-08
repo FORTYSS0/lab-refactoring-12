@@ -5,9 +5,9 @@
 #include "header.hpp"
 #include <string>
 
-class Log {
+class Loger {
  public:
-  static Log& GetInstance();
+  static Loger& GetInstance();
 
   void Setting(bool level);
 
@@ -16,10 +16,10 @@ class Log {
   void WriteDebug(const std::string_view& message) const;
 
  private:
-  Log(): level_(false), out_(&std::cout){}
+  Loger(): level_(false), out_(&std::cout){}
 
-  Log( const Log&) = delete;
-  Log& operator=( Log& ) = delete;
+  Loger( const Loger&) = delete;
+  Loger& operator=(Loger& ) = delete;
 
   bool level_ = false;
   mutable std::ostream* out_;

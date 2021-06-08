@@ -1,25 +1,25 @@
 // Copyright 2021 by FORTYSS
 
-#ifndef INCLUDE_STATSENDER_HPP_
-#define INCLUDE_STATSENDER_HPP_
+#ifndef INCLUDE_STATISTIC_HPP_
+#define INCLUDE_STATISTIC_HPP_
 #include <fstream>
 #include <string_view>
 #include <vector>
 
-#include "Log.hpp"
+#include "Loger.hpp"
 #include "header.hpp"
 
-class StatSender {
+class Statistic {
  public:
   void OnLoaded(const std::vector<Item>& new_items);
 
   void Skip(const Item& item);
 
-  virtual ~StatSender() = default;
+  virtual ~Statistic () = default;
 
  private:
   virtual void AsyncSend(const std::vector<Item>& items, std::string_view path);
 
   std::ofstream fstr{"network", std::ios::binary};
 };
-#endif  // INCLUDE_STATSENDER_HPP_
+#endif  // INCLUDE_STATISTIC_HPP_
