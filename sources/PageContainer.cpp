@@ -6,7 +6,7 @@ const Item& PageContainer::ByIndex(const size_t& i) const {
   return data_[i];
 }
 
-const Item& PageContainer::ById(const string& id) const {
+const Item& PageContainer::ById(const std::string& id) const {
   auto it = std::find_if(std::begin(data_), std::end(data_),
                          [&id](const auto& i) { return id == i.id; });
   return *it;
@@ -14,7 +14,7 @@ const Item& PageContainer::ById(const string& id) const {
 
 void PageContainer::PrintTable() const {
   std::cout << "|\tid\t |\t\tname\t\t|\tscore\t|\n";
-  string separator = "_________________________________________\n";
+  std::string separator = "_________________________________________\n";
   std::cout << separator;
   for (size_t i = 0; i < data_.size(); ++i) {
     const auto& item = ByIndex(i);
@@ -85,7 +85,7 @@ void PageContainer::DataLoad(const float& threshold) {
   data_ = std::move(data);
 }
 
-bool PageContainer::IsCorrect(string& line) {
+bool PageContainer::IsCorrect(std::string& line) {
   size_t counter = 0;
   bool status = true;
   for (auto& ch : line){

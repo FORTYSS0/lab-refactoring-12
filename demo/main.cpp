@@ -9,7 +9,7 @@
 
 namespace po = boost::program_options;
 
-const char error_mes[] = "**********BAD SYNTAX**********\n"
+const char error_mes[] = "**********ERROR SYNTAX**********\n"
                          "Look to --help or -h";
 
 void CreatePo(po::options_description& desc,
@@ -20,7 +20,7 @@ void CreatePo(po::options_description& desc,
 
       ("log_debug,l", "Logger status (Release(if OFF) or Debug(if ON))\n")
 
-      ("input,i", po::value<string>()->default_value("data.txt"),
+      ("input,i", po::value<std::string>()->default_value("data.txt"),
        "Name of input file\n")
 
       ("threshold,t", po::value<int>()->default_value(1),
@@ -35,13 +35,13 @@ int main(const int argc, const char* argv[]) {
     po::variables_map vm;
     CreatePo(desc, vm, argc, argv);
     if(vm.count("help")){
-      cout << desc << endl;
+      std::cout << desc << std::endl;
     } else if(argc > 1){
       Loger::GetInstance().Setting(vm.count("log_debug"));
       UsedMemory used_memory;
 
       PageContainer page{};
-      std::ifstream in(vm["input"].as<string>());
+      std::ifstream in(vm["input"].as<std::string>());
 
       page.RawLoad(in);
       page.DataLoad(vm["threshold"].as<int>());
@@ -70,6 +70,6 @@ int main(const int argc, const char* argv[]) {
       throw po::error(error_mes);
     }
   } catch (const po::error &ex) {
-    cout << error_mes << "\n";
+    std::cout << error_mes << "\n";
   }
 }

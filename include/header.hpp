@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-using string = std::string;
-using std::cout;
-using std::endl;
+//using string = std::string;
+//using std::cout;
+//using std::endl;
 #endif  // INCLUDE_HEADER_HPP_

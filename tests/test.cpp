@@ -16,7 +16,7 @@ TEST(Example, EmptyTest) {
     EXPECT_TRUE(true);
 }
 
-TEST(File, Bad_open){
+TEST(File, Error_open){
   PageContainer page{};
   std::ifstream in;
   try{
@@ -42,7 +42,7 @@ TEST(File, Small){
   EXPECT_THROW(page.RawLoad(in),std::runtime_error);
 }
 
-TEST(File, Rigth_fomat){
+TEST(File, Ok_fomat){
   PageContainer page{};
   std::stringstream file;
   file << "0 name 10\n1 name 3\n2 name 4\n3 name 3\n4 name 10\n5 name 7\n"
@@ -51,7 +51,7 @@ TEST(File, Rigth_fomat){
   EXPECT_EQ(11, page.GetRawDataSize());
 }
 
-TEST(File, Bad_fomat){
+TEST(File, Error_fomat){
   PageContainer page{};
   std::stringstream file;
   file << "0 name 10\n1 name 3\n2 name 4\n3 name 3\n4 name 10\n5 name 7\n"
