@@ -12,7 +12,6 @@
 class StatSender {
 
  public:
-
   void OnLoaded(const std::vector<Item>& new_items);
 
   void Skip(const Item& item);
