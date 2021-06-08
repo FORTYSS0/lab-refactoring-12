@@ -30,7 +30,7 @@ class PageContainer {
 
   void DataLoad(const float& threshold);
 
-  static bool IsCorrect(string& line);
+  static bool IsCorrect(std::string& line);
 
   void PrintTable() const;
 

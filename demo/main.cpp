@@ -7,23 +7,23 @@
 #include "PageContainer.hpp"
 #include "UsedMemory.hpp"
 
-namespace po = boost::program_options;
-
 const char error_mes[] = "**********ERROR SYNTAX**********\n"
                          "Look to --help or -h";
 
-void CreatePo(po::options_description& desc,
-               po::variables_map& vm,
+void CreatePo(boost::program_options::options_description& desc,
+              boost::program_options::variables_map& vm,
                const int& argc, const char** argv){
   desc.add_options()
       ("help,h", "Help screen\n")
 
       ("log_debug,l", "Logger status (Release(if OFF) or Debug(if ON))\n")
 
-      ("input,i", po::value<std::string>()->default_value("data.txt"),
+      ("input,i", boost::program_options::value<std::string>()->default_value(
+                              "data.txt"),
        "Name of input file\n")
 
-      ("threshold,t", po::value<int>()->default_value(1),
+      ("threshold,t", boost::program_options::value<int>()->
+          default_value(1),
        "Enter number\n");
   store(parse_command_line(argc, argv, desc), vm);
   notify(vm);
@@ -31,8 +31,8 @@ void CreatePo(po::options_description& desc,
 
 int main(const int argc, const char* argv[]) {
   try{
-    po::options_description desc{"Options"};
-    po::variables_map vm;
+    boost::program_options::options_description desc{"Options"};
+    boost::program_options::variables_map vm;
     CreatePo(desc, vm, argc, argv);
     if(vm.count("help")){
       std::cout << desc << std::endl;
@@ -67,9 +67,9 @@ int main(const int argc, const char* argv[]) {
           Write("AVG score: " +
                 std::to_string(Histogram::GetInstance().GetAvg()));
     } else {
-      throw po::error(error_mes);
+      throw boost::program_options::error(error_mes);
     }
-  } catch (const po::error &ex) {
+  } catch (const boost::program_options::error &ex) {
     std::cout << error_mes << "\n";
   }
 }
