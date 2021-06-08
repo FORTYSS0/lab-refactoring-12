@@ -1,7 +1,7 @@
 // Copyright 2021 by FORTYSS
 
-#ifndef TEMPLATE_HISTOGRAM_HPP_
-#define TEMPLATE_HISTOGRAM_HPP_
+#ifndef INCLUDE_HISTOGRAM_HPP_
+#define INCLUDE_HISTOGRAM_HPP_
 class Histogram{
  public:
   static Histogram& GetInstance();
@@ -23,4 +23,4 @@ class Histogram{
   int num_skip = 0;
   float avg = 0;
 };
-#endif  // TEMPLATE_HISTOGRAM_HPP_
+#endif  // INCLUDE_HISTOGRAM_HPP_
