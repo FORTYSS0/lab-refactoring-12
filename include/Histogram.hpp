@@ -6,11 +6,11 @@ class Histogram{
  public:
   static Histogram& GetInstance();
 
-  [[nodiscard]] int GetNumSkip() const;
+  [[nodiscard]] int Get_num() const;
 
-  [[nodiscard]] float GetAvg() const;
+  [[nodiscard]] float Get_avg() const;
 
-  void SetAvg(const float& avg_);
+  void Set_svg(const float& avg_);
 
   void PlusNumSkip();
 
@@ -20,7 +20,7 @@ class Histogram{
   Histogram( const Histogram&) = delete;
   Histogram& operator=( Histogram& ) = delete;
 
-  int num_skip = 0;
+  int num = 0;
   float avg = 0;
 };
 #endif  // INCLUDE_HISTOGRAM_HPP_

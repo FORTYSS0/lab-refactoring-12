@@ -49,10 +49,10 @@ int main(const int argc, const char* argv[]) {
                                std::to_string(used_memory.Used()));
       Loger::GetInstance().
           Write("Number skips in this lap: " +
-                std::to_string(Histogram::GetInstance().GetNumSkip()));
+                std::to_string(Histogram::GetInstance().Get_num()));
       Loger::GetInstance().
           Write("AVG score: " +
-                    std::to_string(Histogram::GetInstance().GetAvg()));
+                    std::to_string(Histogram::GetInstance().Get_avg()));
 
       page.PrintTable();
 
@@ -61,10 +61,10 @@ int main(const int argc, const char* argv[]) {
                                std::to_string(used_memory.Used()));
       Loger::GetInstance().
           Write("Number skips in this lap: " +
-                std::to_string(Histogram::GetInstance().GetNumSkip()));
+                std::to_string(Histogram::GetInstance().Get_num()));
       Loger::GetInstance().
           Write("AVG score: " +
-                std::to_string(Histogram::GetInstance().GetAvg()));
+                std::to_string(Histogram::GetInstance().Get_avg()));
     } else {
       throw boost::program_options::error(error_mes);
     }
