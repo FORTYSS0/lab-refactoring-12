@@ -71,7 +71,7 @@ void PageContainer::DataLoad(const float& threshold) {
       sum += item.score;
       ++counter;
     } else {
-      stat_sender_->Skip(item);
+      statistic_sender_->Skip(item);
       Histogram::GetInstance().PlusNumSkip();
     }
   }
@@ -81,7 +81,7 @@ void PageContainer::DataLoad(const float& threshold) {
   }
 
   memory_counter_->OnDataLoad(data_, data);
-  stat_sender_->OnLoaded(data);
+  statistic_sender_->OnLoaded(data);
   data_ = std::move(data);
 }
 
@@ -106,5 +106,5 @@ size_t PageContainer::GetRawDataSize() const { return raw_data_.size(); }
 size_t PageContainer::GetDataSize() const { return data_.size(); }
 PageContainer::~PageContainer() {
   delete memory_counter_;
-  delete stat_sender_;
+  delete statistic_sender_;
 }
