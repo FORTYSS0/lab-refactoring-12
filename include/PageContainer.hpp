@@ -35,14 +35,14 @@ class PageContainer {
   void PrintTable() const;
 
   explicit PageContainer(UsedMemory* memory_counter = new UsedMemory(),
-                         StatSender* stat_sender = new StatSender())
+                         Statistic* stat_sender = new Statistic())
       : memory_counter_(memory_counter), stat_sender_(stat_sender){}
 
   ~PageContainer();
 
  private:
   UsedMemory* memory_counter_;
-  StatSender* stat_sender_;
+  Statistic* stat_sender_;
   std::vector<Item> data_;
   std::vector<std::string> raw_data_;
 };
