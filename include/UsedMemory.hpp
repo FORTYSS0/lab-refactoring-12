@@ -4,10 +4,11 @@
 #define INCLUDE_USEDMEMORY_HPP_
 #include "Log.hpp"
 #include "header.hpp"
+#include <string>
+#include <vector>
 
 class UsedMemory {
  public:
-
   void OnDataLoad(const std::vector<Item>& old_items,
                   const std::vector<Item>& new_items);
 

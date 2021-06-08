@@ -15,7 +15,7 @@ class Log {
   void WriteDebug(const std::string_view& message) const;
 
  private:
-  Log(): level_(false), out_(&std::cout){};
+  Log(): level_(false), out_(&std::cout){}
 
   Log( const Log&) = delete;
   Log& operator=( Log& ) = delete;
