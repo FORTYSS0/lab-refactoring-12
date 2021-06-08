@@ -10,7 +10,6 @@
 #include "header.hpp"
 
 class StatSender {
-
  public:
   void OnLoaded(const std::vector<Item>& new_items);
 
