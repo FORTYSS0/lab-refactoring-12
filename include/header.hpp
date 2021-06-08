@@ -1,6 +1,11 @@
-// Copyright 2020 Your Name <your_email>
+// Copyright 2021 by FORTYSS
 
-#ifndef INCLUDE_HEADER_HPP_
-#define INCLUDE_HEADER_HPP_
-
-#endif // INCLUDE_HEADER_HPP_
+#ifndef TEMPLATE_HEADER_HPP
+#define TEMPLATE_HEADER_HPP
+#include <string>
+#include <vector>
+#include <iostream>
+using string = std::string;
+using std::cout;
+using std::endl;
+#endif  // TEMPLATE_HEADER_HPP
