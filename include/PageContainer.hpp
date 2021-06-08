@@ -1,7 +1,7 @@
 // Copyright 2021 by FORTYSS
 
-#ifndef TEMPLATE_PAGECONTAINER_HPP
-#define TEMPLATE_PAGECONTAINER_HPP
+#ifndef TEMPLATE_PAGECONTAINER_HPP_
+#define TEMPLATE_PAGECONTAINER_HPP_
 #include <algorithm>
 #include <set>
 #include <sstream>
@@ -43,4 +43,4 @@ class PageContainer {
   std::vector<Item> data_;
   std::vector<std::string> raw_data_;
 };
-#endif  // TEMPLATE_PAGECONTAINER_HPP
+#endif  // TEMPLATE_PAGECONTAINER_HPP_
