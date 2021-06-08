@@ -4,9 +4,9 @@
 #define INCLUDE_USEDMEMORY_HPP_
 #include <string>
 #include <vector>
+#include <iostream>
 
 #include "Loger.hpp"
-#include "header.hpp"
 
 class UsedMemory {
  public:

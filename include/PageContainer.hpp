@@ -7,12 +7,12 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <iostream>
 
 #include "Histogram.hpp"
 #include "Loger.hpp"
 #include "Statistic.hpp"
 #include "UsedMemory.hpp"
-#include "header.hpp"
 
 constexpr size_t kMinLines = 10;
 

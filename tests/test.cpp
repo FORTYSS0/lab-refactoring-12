@@ -3,13 +3,13 @@
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
 
+#include <iostream>
 #include <cstring>
 
 #include "Loger.hpp"
 #include "PageContainer.hpp"
 #include "Statistic.hpp"
 #include "UsedMemory.hpp"
-#include "header.hpp"
 #include "sstream"
 
 TEST(Example, EmptyTest) {
